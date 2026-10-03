@@ -1,0 +1,208 @@
+{
+ "captured_from": "result/stage-1 container (docker build of stage-1, unchanged)",
+ "tokens": {
+  "ada": "GjBm0mGNVeP5-QM09dzLcY4JOFTsfnCO7uDeEls0xu0",
+  "bea": "pk2imBh34aaXUhpRORYqUSSGcTGkr1eXutwaGnwoYaU"
+ },
+ "lost_request": {
+  "key": "lost-before-export",
+  "body": {
+   "restaurant_id": "r_anker",
+   "table_id": "t_2",
+   "starts_at_local": "2030-06-14T19:00",
+   "party_size": 4
+  },
+  "response": {
+   "reservation_id": "res_21aa4f8ef4a06f9a",
+   "reference": "87QGVH9E",
+   "restaurant_id": "r_anker",
+   "table_id": "t_2",
+   "party_size": 4,
+   "status": "confirmed",
+   "starts_at_local": "2030-06-14T19:00",
+   "starts_at": "2030-06-14T19:00:00+02:00",
+   "ends_at": "2030-06-14T20:30:00+02:00",
+   "created_at": "2026-09-29T18:57:13+00:00"
+  }
+ },
+ "bea_reference": "V1VHD1IY",
+ "export": {
+  "track": "tablekeeper",
+  "format_version": 1,
+  "state": {
+   "users": [
+    {
+     "id": "u_ada",
+     "email": "ada@example.com",
+     "display_name": "Ada",
+     "password_hash": "scrypt$4096$8$1$0468c318dec3a7e775f8ea1726c3e45d$3ef73bd17863d182cec219901d0e2c6dafdbc0d6f6dbbf4a361851b50b3af3bc2c3964c5ccced1c4b8842eeb030e620c98b17e31f6d25e9e5dcd70f97f9cce4f"
+    },
+    {
+     "id": "u_af8c45454c52292f",
+     "email": "bea@example.com",
+     "display_name": "Bea",
+     "password_hash": "scrypt$4096$8$1$9e60ca0b46f0fa4b0bc445eb360d309c$df0bc0f6857b3619b2af4ad12575728de7ceb5b70ad05d2c29a2a8478e6dd108b6dafe5217490568f56d040fcb5ae026ff642d76d3164ba3b1e395c0d367af40"
+    }
+   ],
+   "tokens": [
+    {
+     "token": "GjBm0mGNVeP5-QM09dzLcY4JOFTsfnCO7uDeEls0xu0",
+     "user_id": "u_ada"
+    },
+    {
+     "token": "pk2imBh34aaXUhpRORYqUSSGcTGkr1eXutwaGnwoYaU",
+     "user_id": "u_af8c45454c52292f"
+    }
+   ],
+   "restaurants": [
+    {
+     "id": "r_anker",
+     "name": "Zum Anker",
+     "timezone": "Europe/Berlin",
+     "slot_minutes": 30,
+     "reservation_duration_minutes": 90,
+     "cancellation_cutoff_minutes": 120,
+     "opening_hours": [
+      {
+       "weekday": "mon",
+       "opens": "18:00",
+       "closes": "23:00"
+      },
+      {
+       "weekday": "tue",
+       "opens": "18:00",
+       "closes": "23:00"
+      },
+      {
+       "weekday": "wed",
+       "opens": "18:00",
+       "closes": "23:00"
+      },
+      {
+       "weekday": "thu",
+       "opens": "18:00",
+       "closes": "23:00"
+      },
+      {
+       "weekday": "fri",
+       "opens": "18:00",
+       "closes": "23:00"
+      },
+      {
+       "weekday": "sat",
+       "opens": "18:00",
+       "closes": "23:00"
+      },
+      {
+       "weekday": "sun",
+       "opens": "18:00",
+       "closes": "23:00"
+      }
+     ],
+     "tables": [
+      {
+       "id": "t_1",
+       "label": "1",
+       "capacity": 2
+      },
+      {
+       "id": "t_2",
+       "label": "2",
+       "capacity": 4
+      },
+      {
+       "id": "t_3",
+       "label": "3",
+       "capacity": 6
+      }
+     ]
+    }
+   ],
+   "reservations": [
+    {
+     "id": "res_seed",
+     "reference": "SEEDREF1",
+     "user_id": "u_ada",
+     "restaurant_id": "r_anker",
+     "table_id": "t_3",
+     "party_size": 5,
+     "starts_at_local": "2030-06-14T18:00",
+     "status": "confirmed",
+     "created_at": "2026-09-29T18:57:13+00:00"
+    },
+    {
+     "id": "res_21aa4f8ef4a06f9a",
+     "reference": "87QGVH9E",
+     "user_id": "u_ada",
+     "restaurant_id": "r_anker",
+     "table_id": "t_2",
+     "party_size": 4,
+     "starts_at_local": "2030-06-14T19:00",
+     "status": "confirmed",
+     "created_at": "2026-09-29T18:57:13+00:00"
+    },
+    {
+     "id": "res_57144365dbc7fa43",
+     "reference": "V1VHD1IY",
+     "user_id": "u_af8c45454c52292f",
+     "restaurant_id": "r_anker",
+     "table_id": "t_1",
+     "party_size": 2,
+     "starts_at_local": "2030-06-14T19:00",
+     "status": "confirmed",
+     "created_at": "2026-09-29T18:57:13+00:00"
+    }
+   ],
+   "receipts": [
+    {
+     "user_id": "u_ada",
+     "method": "POST",
+     "path": "/reservations",
+     "key": "lost-before-export",
+     "body": {
+      "restaurant_id": "r_anker",
+      "table_id": "t_2",
+      "starts_at_local": "2030-06-14T19:00",
+      "party_size": 4
+     },
+     "response": {
+      "reservation_id": "res_21aa4f8ef4a06f9a",
+      "reference": "87QGVH9E",
+      "restaurant_id": "r_anker",
+      "table_id": "t_2",
+      "party_size": 4,
+      "status": "confirmed",
+      "starts_at_local": "2030-06-14T19:00",
+      "starts_at": "2030-06-14T19:00:00+02:00",
+      "ends_at": "2030-06-14T20:30:00+02:00",
+      "created_at": "2026-09-29T18:57:13+00:00"
+     }
+    },
+    {
+     "user_id": "u_af8c45454c52292f",
+     "method": "POST",
+     "path": "/reservations",
+     "key": "bea-1",
+     "body": {
+      "restaurant_id": "r_anker",
+      "table_id": "t_1",
+      "starts_at_local": "2030-06-14T19:00",
+      "party_size": 2
+     },
+     "response": {
+      "reservation_id": "res_57144365dbc7fa43",
+      "reference": "V1VHD1IY",
+      "restaurant_id": "r_anker",
+      "table_id": "t_1",
+      "party_size": 2,
+      "status": "confirmed",
+      "starts_at_local": "2030-06-14T19:00",
+      "starts_at": "2030-06-14T19:00:00+02:00",
+      "ends_at": "2030-06-14T20:30:00+02:00",
+      "created_at": "2026-09-29T18:57:13+00:00"
+     }
+    }
+   ]
+  }
+ }
+}

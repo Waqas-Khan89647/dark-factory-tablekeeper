@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablekeeper &mdash; find a table</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="/">Tablekeeper</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Search</a>
+      <a href="/lookup">My reservation</a>
+      <a href="/signup">Sign up</a>
+      <a href="/login">Log in</a>
+      <span id="current-user" data-testid="current-user" class="hidden"></span>
+      <button type="button" id="logout-button" data-testid="logout-button" class="ghost-button hidden">Log out</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <h1>Find a table</h1>
+
+  <section class="card">
+    <form id="search-form" class="search-form">
+      <div class="field">
+        <label for="restaurant-select">Restaurant</label>
+        <select id="restaurant-select" data-testid="restaurant-select" required></select>
+      </div>
+      <div class="field">
+        <label for="date-input">Date</label>
+        <input id="date-input" data-testid="date-input" type="date" required>
+      </div>
+      <div class="field">
+        <label for="party-size-input">Party size</label>
+        <input id="party-size-input" data-testid="party-size-input" type="number" min="1" value="2" required>
+      </div>
+      <button type="submit" id="search-button" data-testid="search-button" class="primary-button">Search</button>
+    </form>
+    <div id="auth-error" data-testid="auth-error" class="message error hidden" role="alert"></div>
+  </section>
+
+  <section class="card">
+    <h2>Availability</h2>
+    <p id="no-slots" data-testid="no-slots" class="hidden">This restaurant has no slots on that day.</p>
+    <div id="availability-grid" data-testid="availability-grid" class="grid-scroll" aria-live="polite"></div>
+  </section>
+
+  <section id="booking-form" data-testid="booking-form" class="card hidden">
+    <h2>Confirm your table</h2>
+    <p id="booking-summary" data-testid="booking-summary" class="booking-summary-line"></p>
+    <div class="field">
+      <label for="booking-party-size">Party size</label>
+      <input id="booking-party-size" data-testid="booking-party-size" type="number" min="1">
+    </div>
+    <div id="booking-error" data-testid="booking-error" class="message error hidden" role="alert"></div>
+    <div id="booking-uncertain" data-testid="booking-uncertain" class="message uncertain hidden" role="status"></div>
+    <button type="button" id="booking-submit" data-testid="booking-submit" class="primary-button">Book this table</button>
+  </section>
+
+  <section id="confirmation" data-testid="confirmation" class="card hidden">
+    <h2>You&rsquo;re booked</h2>
+    <p>Reference</p>
+    <div id="confirmation-reference" data-testid="confirmation-reference"></div>
+    <p id="confirmation-details" data-testid="confirmation-details"></p>
+    <p id="confirmation-tables" data-testid="confirmation-tables"></p>
+  </section>
+</main>
+<footer class="site-footer">Tablekeeper &mdash; a warm table, every time.</footer>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

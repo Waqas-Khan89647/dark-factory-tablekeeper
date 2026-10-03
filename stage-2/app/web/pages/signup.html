@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablekeeper &mdash; sign up</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="/">Tablekeeper</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Search</a>
+      <a href="/lookup">My reservation</a>
+      <a href="/signup">Sign up</a>
+      <a href="/login">Log in</a>
+      <span id="current-user" data-testid="current-user" class="hidden"></span>
+      <button type="button" id="logout-button" data-testid="logout-button" class="ghost-button hidden">Log out</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <h1>Create your account</h1>
+  <section class="card">
+    <form id="signup-form">
+      <div class="field">
+        <label for="signup-email">Email</label>
+        <input id="signup-email" data-testid="signup-email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="signup-password">Password</label>
+        <input id="signup-password" data-testid="signup-password" type="password"
+               autocomplete="new-password" minlength="8" required>
+      </div>
+      <div class="field">
+        <label for="signup-display-name">Display name</label>
+        <input id="signup-display-name" data-testid="signup-display-name" type="text"
+               autocomplete="name" required>
+      </div>
+      <div id="auth-error" data-testid="auth-error" class="message error hidden" role="alert"></div>
+      <button type="submit" id="signup-submit" data-testid="signup-submit" class="primary-button">Create account</button>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">Tablekeeper &mdash; a warm table, every time.</footer>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

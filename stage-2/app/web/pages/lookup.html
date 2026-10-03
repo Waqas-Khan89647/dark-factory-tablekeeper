@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablekeeper &mdash; find your reservation</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="/">Tablekeeper</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Search</a>
+      <a href="/lookup">My reservation</a>
+      <a href="/signup">Sign up</a>
+      <a href="/login">Log in</a>
+      <span id="current-user" data-testid="current-user" class="hidden"></span>
+      <button type="button" id="logout-button" data-testid="logout-button" class="ghost-button hidden">Log out</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <h1>Find your reservation</h1>
+  <section class="card">
+    <form id="lookup-form" class="search-form">
+      <div class="field">
+        <label for="lookup-reference-input">Reference</label>
+        <input id="lookup-reference-input" data-testid="lookup-reference-input" type="text" required>
+      </div>
+      <button type="submit" id="lookup-submit" data-testid="lookup-submit" class="primary-button">Find</button>
+    </form>
+    <div id="reservation-error" data-testid="reservation-error" class="message error hidden" role="alert"></div>
+  </section>
+
+  <section id="reservation-detail" data-testid="reservation-detail" class="card hidden">
+    <p>Status:
+      <span id="reservation-status" data-testid="reservation-status" class="reservation-status-badge"></span>
+    </p>
+    <p id="reservation-tables" data-testid="reservation-tables"></p>
+    <p id="reservation-summary"></p>
+    <button type="button" id="reservation-cancel-button" data-testid="reservation-cancel-button"
+            class="primary-button">Cancel reservation</button>
+  </section>
+</main>
+<footer class="site-footer">Tablekeeper &mdash; a warm table, every time.</footer>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

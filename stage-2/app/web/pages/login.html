@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablekeeper &mdash; log in</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="/">Tablekeeper</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Search</a>
+      <a href="/lookup">My reservation</a>
+      <a href="/signup">Sign up</a>
+      <a href="/login">Log in</a>
+      <span id="current-user" data-testid="current-user" class="hidden"></span>
+      <button type="button" id="logout-button" data-testid="logout-button" class="ghost-button hidden">Log out</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <h1>Log in</h1>
+  <section class="card">
+    <form id="login-form">
+      <div class="field">
+        <label for="login-email">Email</label>
+        <input id="login-email" data-testid="login-email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="login-password">Password</label>
+        <input id="login-password" data-testid="login-password" type="password"
+               autocomplete="current-password" required>
+      </div>
+      <div id="auth-error" data-testid="auth-error" class="message error hidden" role="alert"></div>
+      <button type="submit" id="login-submit" data-testid="login-submit" class="primary-button">Log in</button>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">Tablekeeper &mdash; a warm table, every time.</footer>
+<script src="/static/app.js" defer></script>
+</body>
+</html>
