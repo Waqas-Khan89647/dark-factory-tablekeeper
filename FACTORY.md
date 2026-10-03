@@ -49,4 +49,5 @@ Before the final run we ran the factory twice on practice work. Two failures led
 - We started a polish round (table drawings with seat counts, a legend, local default date, a clearer mobile and desktop layout, team name in the header) in a new room. The Claude session limit stopped it before any code changed, so none of it is in this submission. The accepted stage 1 and stage 2 are submitted unchanged.
 - There is no browser-driven test suite in the repository.
 - Stages 3 and 4 were not attempted.
+- The agents worked in a plain folder that was not a git repository, so the seats made no commits during the run and this repository has no per-seat commit history. The room log (`room.json`) is the record of who did what. The stage folders were committed once, unmodified, by the human, copied from the folder the agents wrote in. Both stages passed the harness in that folder and again from a fresh clone of this repository.
 - The human did not write or edit application code. The human built and installed the mandates, sent the task messages, restarted tools that crashed, and ran the final checks.
